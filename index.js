@@ -22,11 +22,21 @@ function inc() {
  }
 
 
- function changeCounterColor(){
-     if ( countEl.textContent > 0){
+ function changeCounterColor (){
+
+    let counterValue = parseInt(countEl.textContent);
+
+    if (counterValue > 0){
+
         countEl.style.color = "green";
-     }
-     if ( countEl.textContent < 0){
+    }
+    else if (counterValue < 0){
+
         countEl.style.color = "red";
-     }
- }
+    }
+    else{
+
+        countEl.style.color = "black";
+    }
+   
+}
